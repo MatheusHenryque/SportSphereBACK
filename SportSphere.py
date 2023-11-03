@@ -34,7 +34,7 @@ def register():
     cursor.close()
 
     
-    external_url_register = 'https://sport-sphere-6zl0yjdgv-matheus-silvas-projects-1103c8c3.vercel.app/Cadastro'
+    external_url_register = 'https://sport-sphere.vercel.app/Cadastro'
     try:
         response = requests.get(external_url_register)
         data = response.json()  
@@ -62,7 +62,7 @@ def login():
 
     if user_data and bcrypt.check_password_hash(user_data[0], senha):
         
-        external_url_login = 'https://sport-sphere-6zl0yjdgv-matheus-silvas-projects-1103c8c3.vercel.app/'
+        external_url_login = 'https://sport-sphere.vercel.app/Login'
         try:
             response = requests.get(external_url_login)
             data = response.json()  
