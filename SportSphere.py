@@ -62,7 +62,7 @@ def login():
 
     if user_data and bcrypt.check_password_hash(user_data[0], senha):
         
-        external_url_login = 'https://sport-sphere.vercel.app/Login'
+        external_url_login = 'https://sport-sphere.vercel.app'
         try:
             response = requests.get(external_url_login)
             data = response.json()  
