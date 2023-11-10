@@ -36,13 +36,11 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 @app.route('/cadastro', methods=['POST'])
-def cadastro():
-    data = request.get_json()  
-
-    nome = data.get('nome')
-    email = data.get('email')
-    telefone = data.get('telefone')
-    senha = data.get('senha')
+def cadastro(nome, email, telefone, senha):  
+    nome = nome
+    email = email
+    telefone = telefone
+    senha = senha
 
     if not nome or not email or not senha or not telefone:
         return jsonify({'message': 'Campos nome, email, telefone e senha são obrigatórios'}), 400
